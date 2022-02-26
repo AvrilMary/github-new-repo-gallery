@@ -4,6 +4,8 @@
 const overview = document.querySelector(".overview");
 // Git Hub username
 const username = "AvrilMary";
+// Selection of unordered list to display repos
+const displayRepos = document.querySelector(".repo-list");
 
 // Async function to fetch information from Github profile
 const getProfile = async function () {
@@ -27,5 +29,25 @@ const displayUserInfo = function (data) {
     <p><strong>Number of public repos:</strong> ${data.public_repos}</p>
   </div>`;
     overview.append(newDiv);
+    getRepos();
 };
+
+const getRepos = async function () {
+    const res = await fetch (`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
+    const repos = await res.json();
+    console.log(repos);
+    displayRepoInfo(repos);
+};
+
+//getRepos();
+
+const displayRepoInfo = function (repos) {
+    for (let repo of repos) {
+    let listItem = document.createElement("li");
+    listItem.classList.add("repo");
+    listItem.innerHTML =  `<h3>${repo.name}</h3>`;
+    displayRepos.append(listItem);
+    }
+};
+
     
