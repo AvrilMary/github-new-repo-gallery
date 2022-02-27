@@ -49,6 +49,10 @@ h1 {
     border-top-right-radius: 20px;
 }
 
+.overview {
+    color:rgb(0, 0, 0);
+}
+
 .badge {
     height: 80px;
     width: 50px;
