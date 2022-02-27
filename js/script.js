@@ -10,6 +10,12 @@ const displayRepos = document.querySelector(".repo-list");
 const allRepoInfo = document.querySelector(".repos");
 // Variable to select individual repo info
 const individualRepo = document.querySelector(".repo-data");
+// Variable to go back to Repo Gallery
+const viewGallery = document.querySelector(".view-repos");
+// Variable to filter input
+const filterInput = document.querySelector(".filter-repos");
+
+
 
 // Async function to fetch information from Github profile
 const getProfile = async function () {
@@ -22,6 +28,7 @@ const getProfile = async function () {
 getProfile();
 
 const displayUserInfo = function (data) {
+    filterInput.classList.remove("hide");
     let newDiv = document.createElement("div");
     newDiv.innerHTML = `<figure>
     <img alt="user avatar" src=${data.avatar_url} />
@@ -89,4 +96,27 @@ const displayRepoInfo = function (repos) {
        individualRepo.append(newDiv);
        individualRepo.classList.remove("hide");
        allRepoInfo.classList.add("hide"); 
+       viewGallery.classList.remove("hide");
    }; 
+
+
+   viewGallery.addEventListener("click", function () {
+    allRepoInfo.classList.remove("hide");
+    individualRepo.classList.add("hide");
+    viewGallery.classList.add("hide");
+   })
+
+   filterInput.addEventListener("input", function (e) {
+       let input = filterInput.value;
+       console.log(input);
+       const repos = document.querySelectorAll(".repo");
+       const lowercaseInput = input.toLowerCase();
+       for (let repo of repos) {
+           let lowercaseRepo = repo.innerText.toLowerCase();
+           if (lowercaseRepo.includes(lowercaseInput)) {
+               ____________________
+           } else {
+               ______________________
+            }
+       }
+   });
