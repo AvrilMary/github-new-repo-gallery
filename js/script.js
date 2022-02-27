@@ -111,12 +111,13 @@ const displayRepoInfo = function (repos) {
        console.log(input);
        const repos = document.querySelectorAll(".repo");
        const lowercaseInput = input.toLowerCase();
+       
        for (let repo of repos) {
            let lowercaseRepo = repo.innerText.toLowerCase();
            if (lowercaseRepo.includes(lowercaseInput)) {
-               ____________________
-           } else {
-               ______________________
-            }
+               repo.classList.remove("hide");
+            } else {
+                repo.classList.add("hide");
        }
+    }
    });
