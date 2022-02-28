@@ -29,8 +29,8 @@ getProfile();
 
 const displayUserInfo = function (data) {
     filterInput.classList.remove("hide");
-    let newDiv = document.createElement("div");
-    newDiv.innerHTML = `<figure>
+    let newSection = document.createElement("section");
+    newSection.innerHTML = `<figure>
     <img alt="user avatar" src=${data.avatar_url} />
   </figure>
   <div>
@@ -39,7 +39,7 @@ const displayUserInfo = function (data) {
     <p><strong>Location:</strong> ${data.location}</p>
     <p><strong>Number of public repos:</strong> ${data.public_repos}</p>
   </div>`;
-    overview.append(newDiv);
+    overview.append(newSection);
     getRepos();
 };
 

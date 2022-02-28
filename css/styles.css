@@ -49,9 +49,30 @@ h1 {
     border-top-right-radius: 20px;
 }
 
-.overview {
-    color:rgb(0, 0, 0);
+.intro {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #483978;
+    justify-content: center;
+    align-items: center;
 }
+
+.overview section {
+    color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview figure {
+    width: 20%;
+}
+
+.overview div {
+    width: 50%;
+}
+
 
 .badge {
     height: 80px;
