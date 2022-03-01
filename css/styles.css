@@ -109,23 +109,29 @@ ul {
 }
 
 
+/*.overview section {
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items:flex-start;
+} */
+
 .overview section {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items:flex-start;
+    margin: 0 auto;
 }
 
-
-.overview div {
-    width: 80%;
-    
-}
 
 .overview div p {
     line-height: 25px;
     border-bottom: 1px solid #fff;
-    padding-bottom: 10px;
+    padding: 10px; 
+    width: 85%;
+    margin: 0 auto;
+    
 }
 
 .overview {
@@ -139,6 +145,8 @@ figure {
     height: 40%;
     border-radius: 50%;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 .intro,
@@ -315,8 +323,8 @@ section.repo-data {
     }
 
     figure {
-        width: 20%;
-        height: 20%;
+        width: 25%;
+        height: 25%;
         border-radius: 50%;
         margin-right: 5%;
         overflow: hidden;
