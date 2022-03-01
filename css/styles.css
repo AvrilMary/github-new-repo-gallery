@@ -27,7 +27,7 @@ body {
 }
 
 .fa-github-alt {
-    color: #9b8dc9;
+    color: #f86d58;
 }
 
 img {
@@ -100,6 +100,45 @@ ul {
     align-items: center;
     width: 90%;
     max-width: 1200px;
+}
+
+.intro {
+    background-color: #483978;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.overview section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+
+.overview div {
+    width: 80%;
+    
+}
+
+.overview div p {
+    line-height: 25px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+.overview {
+    color: #fff;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+figure {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .intro,
@@ -247,6 +286,14 @@ section.repo-data {
     .repo-list li {
         width: 48%;
     }
+
+    .overview section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items:flex-start;
+    }
+
 }
 
 @media (max-width: 700px) {
@@ -258,5 +305,25 @@ section.repo-data {
 @media (min-width: 1200px) {
     .repo-list li {
         width: 30%;
+    }
+
+    .overview section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items:flex-start;
+    }
+
+    figure {
+        width: 20%;
+        height: 20%;
+        border-radius: 50%;
+        margin-right: 5%;
+        overflow: hidden;
+    }
+
+    .overview div {
+        width: 45%;
+        
     }
 }
