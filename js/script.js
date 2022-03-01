@@ -34,7 +34,7 @@ const displayUserInfo = function (data) {
     <img alt="user avatar" src=${data.avatar_url} />
   </figure>
   <div>
-    <p><strong>Name:</strong> ${data.name}</p>
+    <p><strong>${data.name}</strong></p>
     <p><strong>Bio:</strong> ${data.bio}</p>
     <p><strong>Location:</strong> ${data.location}</p>
     <p><strong>Number of public repos:</strong> ${data.public_repos}</p>
@@ -88,7 +88,7 @@ const displayRepoInfo = function (repos) {
    const  displaySpecificRepoInfo = function (repoInfo, languages) {
        individualRepo.innerHTML = "";
        let newDiv = document.createElement("div");
-        newDiv.innerHTML = `<h3>Name: ${repoInfo.name}</h3>
+        newDiv.innerHTML = `<h3>${repoInfo.name}</h3>
             <p>Description: ${repoInfo.description}</p>
             <p>Default Branch: ${repoInfo.default_branch}</p>
             <p>Languages: ${languages.join(", ")}</p>
