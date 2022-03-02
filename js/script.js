@@ -61,6 +61,9 @@ const displayRepoInfo = function (repos) {
     }
 };
 
+
+// QUESTION FOR ANN. CAN IT IDENTIFY H3 ////
+
    const repoList = displayRepos.addEventListener("click", function (e) {
        if (e.target.matches("h3")) {
            const repoName = e.target.innerText;
@@ -105,6 +108,7 @@ const displayRepoInfo = function (repos) {
     individualRepo.classList.add("hide");
     viewGallery.classList.add("hide");
    })
+
 
    filterInput.addEventListener("input", function (e) {
        let input = filterInput.value;
