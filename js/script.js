@@ -62,7 +62,6 @@ const displayRepoInfo = function (repos) {
 };
 
 
-// QUESTION FOR ANN. CAN IT IDENTIFY H3 ////
 
    const repoList = displayRepos.addEventListener("click", function (e) {
        if (e.target.matches("h3")) {
@@ -76,7 +75,7 @@ const displayRepoInfo = function (repos) {
     const res = await fetch (`https://api.github.com/repos/${username}/${repoName}`);
     const repoInfo = await res.json();
     console.log(repoInfo);
-    const fetchLanguages = await fetch (`https://api.github.com/repos/${username}/${repoName}/languages`);
+    const fetchLanguages = await fetch (repoInfo.languages_url);
     const languageData = await fetchLanguages.json();
     console.log(languageData);
     const languages = [];
