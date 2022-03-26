@@ -18,16 +18,8 @@ body {
     display: none !important;
 }
 
-.view-repos {
-    margin-top: 1.5em;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    align-self: center;
-    width: 300px;
-}
-
 .fa-github-alt {
-    color: #f86d58;
+    color: #F2D091;
 }
 
 img {
@@ -37,12 +29,12 @@ img {
 
 h1 {
     width: 100%;
-    padding: 1em 0.5em;
+    padding: 1.5em 0.5em;
     margin: 0;
-    font-size: 3.5em;
+    font-size: 2em;
     text-align: center;
     font-family: "Oswald", sans-serif;
-    background-color: #483978;
+    background-color: #8C4646;
     color: #fff;
     text-transform: uppercase;
     border-top-left-radius: 20px;
@@ -56,7 +48,7 @@ h1 {
 .badge {
     height: 80px;
     width: 50px;
-    background-color: grey;
+    background-color: #F2A679;
     z-index: 98;
     margin-bottom: -35px;
     margin-top: 10px;
@@ -68,7 +60,7 @@ h1 {
 .circle {
     width: 20px;
     height: 20px;
-    background-color: #483978;
+    background-color: #8C4646;
     border-radius: 100%;
     z-index: 99;
     align-self: center;
@@ -84,7 +76,8 @@ h1 {
 h3 {
     width: 100%;
     text-align: center;
-    color: #f86d58;
+    color: #F2A679;
+    text-transform: capitalize;
 }
 
 ul {
@@ -103,7 +96,7 @@ ul {
 }
 
 .intro {
-    background-color: #483978;
+    background-color: #8C4646;
     justify-content: center;
     align-items: center;
 }
@@ -114,18 +107,18 @@ ul {
     flex-flow: row wrap;
     justify-content: center;
     align-items:flex-start;
+    margin: 0 auto;
 }
 
-
-.overview div {
-    width: 80%;
-    
-}
 
 .overview div p {
     line-height: 25px;
     border-bottom: 1px solid #fff;
-    padding-bottom: 10px;
+    padding: 10px; 
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1em;
+    
 }
 
 .overview {
@@ -135,10 +128,13 @@ ul {
 }
 
 figure {
-    width: 40%;
-    height: 40%;
+    width: 35%;
+    height: 35%;
     border-radius: 50%;
+    margin-top: 0;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 .intro,
@@ -187,7 +183,7 @@ figure {
     margin-top: 1em;
     padding: 1em;
     margin-bottom: 1em;
-    border: 2px solid #483978;
+    border: 4px solid #8C4646;
 }
 
 section.repo-data {
@@ -216,8 +212,9 @@ section.repo-data {
 .repo-list li {
     width: 90%;
     margin: 1em 0;
-    border: 1px solid #f86d58;
+    border: 3px dashed #F2D091;
     padding: 0.5em;
+    text-align: center;
 }
 
 .repo-list h3 {
@@ -238,27 +235,27 @@ section.repo-data {
 
 .repo-data {
     width: 100%;
-}
+} 
 
 .repo-data h3 {
-    text-align: left;
-}
+    text-align: center;
+} /* Make this title responsive!!*/
 
 .repo-data .visit {
     text-decoration: none;
-    max-width: 200px;
+    width: 200px;
     color: #fff;
     padding: 0.75em;
     margin-top: 2em;
     cursor: pointer;
     display: block;
-    background-color: #483978;
-    border: 1px solid #483978;
+    background-color: #D9695F;
+    border: 3px solid #8C4646;
 }
 
 .repo-data .visit:hover {
-    background-color: #2f2550;
-    border: 1px solid #ccc;
+    background-color: #F2A679;
+    border: 5px solid #F2D091;
 }
 
 .button-container {
@@ -270,7 +267,19 @@ section.repo-data {
 
 .view-repos {
     max-width: 200px;
+    background-color: #D9695F;
+    border: 3px solid #8C4646;
+    color: #fff;
+    padding: 0.75em;
     margin-top: 0;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+}
+
+.view-repos:hover {
+    background-color: #F2A679;
+    border: 5px solid #F2D091;
 }
 
 @media (min-width: 700px) {
@@ -294,15 +303,34 @@ section.repo-data {
         align-items:flex-start;
     }
 
+
+    .repo-data h3 {
+        font-size: 2em;
+    }
+
 }
 
-@media (max-width: 700px) {
+@media (min-width: 700px) {
     .user-info div p {
         margin: 10px;
     }
+
+    .repo-data h3 {
+        text-align: left;
+    } 
+
+    h1 {
+        font-size: 3em;
+    }
+
 }
 
 @media (min-width: 1200px) {
+    
+    h1 {
+        font-size: 3.5em;
+    }
+    
     .repo-list li {
         width: 30%;
     }
@@ -326,4 +354,7 @@ section.repo-data {
         width: 45%;
         
     }
+    .repo-data h3 {
+        text-align: left;
+    } 
 }
