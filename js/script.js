@@ -21,7 +21,6 @@ const filterInput = document.querySelector(".filter-repos");
 const getProfile = async function () {
     const res = await fetch (`https://api.github.com/users/${username}`);
     const data = await res.json();
-    console.log(data);
     displayUserInfo(data);
 };
 
@@ -46,7 +45,6 @@ const displayUserInfo = function (data) {
 const getRepos = async function () {
     const res = await fetch (`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
     const repos = await res.json();
-    console.log(repos);
     displayRepoInfo(repos);
 };
 
@@ -74,15 +72,12 @@ const displayRepoInfo = function (repos) {
    const specificRepoInfo = async function (repoName) {
     const res = await fetch (`https://api.github.com/repos/${username}/${repoName}`);
     const repoInfo = await res.json();
-    console.log(repoInfo);
     const fetchLanguages = await fetch (repoInfo.languages_url);
     const languageData = await fetchLanguages.json();
-    console.log(languageData);
     const languages = [];
         for (let key in languageData) {
             languages.push(key);
         }
-        console.log(languages);
     displaySpecificRepoInfo(repoInfo, languages);
    };
 
@@ -111,7 +106,6 @@ const displayRepoInfo = function (repos) {
 
    filterInput.addEventListener("input", function (e) {
        let input = filterInput.value;
-       console.log(input);
        const repos = document.querySelectorAll(".repo");
        const lowercaseInput = input.toLowerCase();
        

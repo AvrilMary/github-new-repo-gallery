@@ -130,7 +130,8 @@ ul {
 figure {
     width: 35%;
     height: 35%;
-    border-radius: 50%;
+    border: 5px solid white;
+    border-radius: 100%;
     margin-top: 0;
     overflow: hidden;
     align-items: center;
@@ -239,7 +240,7 @@ section.repo-data {
 
 .repo-data h3 {
     text-align: center;
-} /* Make this title responsive!!*/
+} 
 
 .repo-data .visit {
     text-decoration: none;
